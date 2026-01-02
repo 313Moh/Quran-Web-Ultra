@@ -14,7 +14,7 @@ function showPage(page) {
     if (page < 1 || page > IMAGE_COUNT) return;
     currentPage = page;
     localStorage.setItem("lastPage", page);
-    img.src = `pages/page_${String(page).padStart(3, "0")}.jpg`;
+    img.src = `pages/page_${String(page).padStart(3, "0")}.jpeg`;
 }
 
 // مناطق النقر للتنقل
@@ -128,4 +128,5 @@ function openPageSearch() {
 // ============================================
 // عرض الصفحة عند البداية
 // ============================================
+
 showPage(currentPage);
