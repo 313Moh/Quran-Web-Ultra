@@ -17,6 +17,7 @@ function showPage(page) {
     localStorage.setItem("lastPage", page);
     img.src = `pages/page${page}.jpeg`;
     pageContainer.scrollTop = 0; // نرجع للتمرير لأعلى عند تغيير الصفحة
+    window.scrollTo({ top: 0 });
 }
 
 // مناطق النقر للتنقل
@@ -143,4 +144,5 @@ document.addEventListener("keydown", (e) => {
 // ============================================
 // عرض الصفحة عند البداية
 // ============================================
+
 showPage(currentPage);
