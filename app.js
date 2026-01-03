@@ -15,7 +15,7 @@ function showPage(page) {
     if (page < 1 || page > IMAGE_COUNT) return;
     currentPage = page;
     localStorage.setItem("lastPage", page);
-    img.src = `pages/page_${String(page).padStart(3, "0")}.jpeg`;
+    img.src = `pages/page${page}.jpeg`;
     pageContainer.scrollTop = 0; // نرجع للتمرير لأعلى عند تغيير الصفحة
 }
 
@@ -143,4 +143,5 @@ document.addEventListener("keydown", (e) => {
 // ============================================
 // عرض الصفحة عند البداية
 // ============================================
+
 showPage(currentPage);
