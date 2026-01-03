@@ -5,7 +5,7 @@ html, body {
     margin: 0;
     padding: 0;
     background: black;
-    overflow: hidden;
+    overflow-y: auto; /* السماح بالتمرير العمودي */
     cursor: default;
 }
 
@@ -13,16 +13,17 @@ html, body {
    صفحة المصحف
 ========================================= */
 #quran-page-container {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* يبدأ من الأعلى لتمكين التمرير العمودي */
-    height: 100vh;
-    overflow-y: auto; /* التمرير العمودي */
+    margin-top: 0;
+    margin-bottom: 20px; /* قليل مسافة تحت الصفحة */
 }
 
 #quran-page-image {
-    max-width: 100%;
-    height: auto;
+    width: 100%;   /* يملأ عرض الشاشة */
+    height: auto;  /* ارتفاع طبيعي حسب الصورة */
+    display: block;
 }
 
 /* =========================================
